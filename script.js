@@ -204,7 +204,6 @@ const vel = {
 }
 
 console.log(`${vel.name} has ${vel.friends.length} friends, and his best friend is called ${vel.friends[0]}`);
-*/
 
 const rishi = {
     firstName: 'Rishivel',
@@ -217,10 +216,108 @@ const rishi = {
     // calcAge: function (birthYear) {
     //     return 2025 - birthYear;
     // }
+    // calcAge: function () {
+    //     //console.log(this)
+    //     return 2025 - this.birthYear
+    // }
     calcAge: function () {
-        return 2025 - this.birthYear
+        this.age = 2025 - this.birthYear
+        return this.age
     }
 };
 
 console.log(rishi.calcAge());
+console.log(rishi.age);
+console.log(rishi.age);
+console.log(rishi.age);
 //console.log(rishi['calcAge'](2007));
+
+
+
+const rishi = {
+    name: 'Rishivel.S',
+    birthyear: 2006,
+    calcAge: function () {
+        this.age = 2025 - this.birthyear;
+        return this.age;
+    },
+    job: 'Learner',
+    haveLicense: true,
+    licenseString: function () {
+        return this.haveLicense ? `he has a driving license.` : `he does not have drinving license.`
+    }
+};
+
+console.log(rishi.calcAge());
+console.log(rishi.age);
+
+console.log(`${rishi.name} is a ${rishi.calcAge()}-year old ${rishi.job}, and ${rishi.licenseString()}`);
+
+//loops
+
+console.log('1')
+console.log('1')
+console.log('1')
+console.log('1');
+
+//for loop
+
+for (let i = 1; i <= 10; ++i) {
+    console.log(`move ${i}`)
+}
+
+
+
+const friends = ['rishi', 'pradeep', 'rahul', 'smart'];
+const types = [];
+for (let i = 0; i < friends.length; i++) {
+    console.log(friends[i], typeof (friends[i]))
+    // types.push(typeof (friends[i]));
+    types[i] = typeof (friends[i])
+}
+console.log(types);
+
+const birthYear = [2000, 2004, 1998, 1900];
+const ages = [];
+
+for (let i = 0; i < birthYear.length; i++) {
+    let age = 2025 - birthYear[i];
+    ages.push(age)
+}
+console.log(ages)
+//continue and break
+const friends = ['rishi', 'pradeep', 'rahul', 'smart', 12, 3, true];
+
+for (let i = 0; i < friends.length; i++) {
+    if (typeof friends[i] !== 'string') continue;
+    console.log(friends[i], typeof (friends[i]));
+}
+
+for (let i = 0; i < friends.length; i++) {
+    if (typeof friends[i] === 'number') break;
+    console.log(friends[i], typeof (friends[i]));
+}
+
+
+const friends = ['rishi', 'pradeep', 'rahul', 'smart', 12, 3, true];
+
+for (let i = friends.length - 1; i >= 0; i--) {
+    console.log(friends[i])
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`----- Exercise ----- ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Rep ${rep}`)
+    }
+}
+    */
+
+// while loop
+
+let rep = 1;
+while (rep <= 10) {
+    console.log('Exercise', rep);
+    rep++;
+}
